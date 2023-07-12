@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELSYC44GP9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ELSYC44GP9');
+</script>
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="style.css">
+
+        <title>تشخيص النبات</title>
+    </head>
+    <body>
+       
+        <!--==================== HEADER ====================-->
+        <header class="" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class="ri-leaf-line nav__logo-icon"> دليل المزارع</i> 
+                   <!-- <img src="assets/img/plant1.png" alt="" class="logo__img">
+                    <i class="ri-leaf-line nav__logo-icon"></i> Plantex-->
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">الصفحة الرئيسية</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html#products" class="nav__link">خدمات</a>
+                        </li>
+                        <!--
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact Us</a>
+                        </li>
+                    -->
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+  
+            <!--==================== PRODUCTS ====================-->
+            <section class="product section container" id="products" dir="auto">
+                <h1 class="section__title-center">
+                    تشخيص  النباتات 🌱
+                </h1>
+                <hr>
+                
+                <div class="upload-btn-wrapper">
+                    <button class="btn upload-file font-weight-500">
+                        <span class="upload-btn">
+                            <i class="material-icons d-block font-50 pb-2">cloud_upload</i>
+                            <p id="choose-text-1"> 🍃 اختر صورة ورقة النبات</p>
+                        </span>
+                        <span class="upload-select-button" id="blankFile-1">
+                            *Supports .png, .jpg, .jpeg, .jfif
+                        </span>
+                        <span class="success-1">
+                            <i class="material-icons text-success">check</i>
+                        </span>
+                    </button>
+                    <input type="file" name="uploadImage" id="uploadImage">
+                </div>
+            
+                <!-- <p class = "tutorial">😇 Check out how and why this was built <a href="https://medium.com/@rexsimiloluwa/building-a-plant-disease-classification-web-app-in-keras-and-tensorflow-js-d435829213fa" target="blank">HERE</a> → Download test images <a href="https://github.com/rexsimiloluwah/PLANT-DISEASE-CLASSIFIER-WEB-APP-TENSORFLOWJS/tree/master/test-dataset" target="blank">HERE</a> </p>
+                -->
+                <div class="row">
+                    <div class="box">
+                        <img src="" alt="" id="image" width="224" height="224">
+                    </div>
+            
+                    <div class="box box-result">
+                        <div class="init_status"></div>
+                        <div>
+                            <h2>نباتك مصاب ب :- <span class="pred_class"></span></h2>
+                            
+                        </div>
+                        <div class="accuracy">
+                            <div class="progress" id="progress">
+                                <div class="inner">
+                                  
+                                </div>
+                              </div>
+            
+                        </div>
+                        <p style="padding : 10px;"> الثقة : <b><span class="confidence"></span></b>%</p>
+                    </div>
+                </div>
+                <div dir="rtl">
+                    <input class="play" onclick='responsiveVoice.speak(document.getElementById("text").value, "Arabic Female");' type='button' value='►قراءه' />
+		            <input onclick='responsiveVoice.cancel();' type='button' value='■ توقف' />
+		            <!--<input onclick='audio();' type='button' value='▼ تيليشارجي الهدرة' />-->
+                    <br>
+                    <hr>
+                    <div class="box box-result">
+                        <div class="init_status"></div>
+                        <div>
+		                    <textarea id="text" class="read" readonly></textarea>
+                        </div>
+                </div>
+                <p class="print"></p>
+
+            
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.3.min.js"></script>
+	    <script src='js.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/2.0.1/tf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
